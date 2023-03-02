@@ -12,14 +12,13 @@
 					<div class="title">
 						Person
 					</div>
-					<% if (locals.allRestaurants) { %>
+					<% if (true) { %>
 						<div class="table-container">
 						<table class="table is-bordered is-hoverable is-striped is-narrow">
 							<thead>
 							<tr>
 								<th> Restaurant Name </th>
 								<th> Restaurant Description </th>
-								<th> Skill List</th>
 								<th> &nbsp; </th>
 							</tr>
 							</thead>
@@ -28,7 +27,7 @@
 							<tr>
 								<td><%= allRestaurants[i].name %></td>
 								<td><%= allRestaurants[i].description %></td>
-								<td><a href="/deletePerson?id=<%= allRestaurants[i].person_id %>">
+								<td><a href="/deleteRestaurant?id=<%= allRestaurants[i].restauarnt_id %>">
 									<span class="icon is-small">
 										<i class="fas fa-user-times"></i>
 									</span></a>
