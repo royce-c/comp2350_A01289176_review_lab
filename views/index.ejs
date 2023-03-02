@@ -12,24 +12,24 @@
 					<div class="title">
 						Person
 					</div>
-					<% if (locals.allPeople) { %>
+					<% if (locals.allRestaurants) { %>
 						<div class="table-container">
 						<table class="table is-bordered is-hoverable is-striped is-narrow">
 							<thead>
 							<tr>
-								<th> First Name </th>
-								<th> Last Name </th>
+								<th> Restaurant Name </th>
+								<th> Restaurant Description </th>
 								<th> Skill List</th>
 								<th> &nbsp; </th>
 							</tr>
 							</thead>
 							<% let i=0; %>
-							<% for(i=0; i < allPeople.length; i++) { %>
+							<% for(i=0; i < allRestaurants.length; i++) { %>
 							<tr>
-								<td><%= allPeople[i].first_name %></td>
-								<td><%= allPeople[i].last_name %></td>
-								<td><%= allPeople[i].skill_list %></td>
-								<td><a href="/deletePerson?id=<%= allPeople[i].person_id %>">
+								<td><%= allRestaurants[i].first_name %></td>
+								<td><%= allRestaurants[i].last_name %></td>
+								<td><%= allRestaurants[i].skill_list %></td>
+								<td><a href="/deletePerson?id=<%= allRestaurants[i].person_id %>">
 									<span class="icon is-small">
 										<i class="fas fa-user-times"></i>
 									</span></a>

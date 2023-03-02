@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 					console.log(err);
 				}
 				else { //success
-					res.render('index', {allPeople: result});
+					res.render('index', {AllRestaurants: result});
 
 					//Output the results of the query to the Heroku Logs
 					console.log(result);
