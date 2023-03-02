@@ -76,7 +76,7 @@ router.get('/deleteRestaurant', (req, res) => {
 			let restaurantId = req.query.id;
 			if (restaurantId) {
 				//delete from person_skill where person_id = :person_id;
-				dbModel.deletePersonSkill(personId, (err, result) => {
+				// dbModel.deletePersonSkill(personId, (err, result) => {
 
 					// if (err) {
 					// 	res.render('error', {message: 'Error writing to MySQL'});
@@ -101,7 +101,7 @@ router.get('/deleteRestaurant', (req, res) => {
 							}
 						});
 					// }
-				});
+				// });
 			}
 			else {
 				res.render('error', {message: 'Error on Delete'});
