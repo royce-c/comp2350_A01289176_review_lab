@@ -16,6 +16,8 @@ function getAllRestaurants(callback) {
 }
 
 function addRestaurant(postData, callback) {
+	console.log(postData)
+	console.log(postData.name, postData.description)
 	let sqlInsert = "INSERT INTO restaurant (name, description) VALUES (:name, :description);";
 	let params = {	
 		name: postData.name,
