@@ -16,10 +16,10 @@ function getAllRestaurants(callback) {
 }
 
 function addRestaurant(postData, callback) {
-	let sqlInsert = "INSERT INTO restaurant (restaurant_name, description) VALUES (:restaurant_name, :description);";
+	let sqlInsert = "INSERT INTO restaurant (restaurant_name, restaurant_description) VALUES (:restaurant_name, :restaurant_description);";
 	let params = {	
 		restaurant_name: postData.restaurant_name,
-			description: postData.description
+		restaurant_description: postData.restaurant_description
 		};
 	console.log(sqlInsert);
 	database.query(sqlInsert, params, (err, results, fields) => {
