@@ -42,7 +42,7 @@ router.post('/addRestaurant', (req, res) => {
 		}
 		else {
 			console.log(req.body); 
-			dbModel.addPerson(req.body, (err, result) => {
+			dbModel.addRestaurant(req.body, (err, result) => {
 				if (err) {
 					res.render('error', {message: 'Error writing to MySQL'});
 					console.log("Error writing to mysql");
@@ -77,7 +77,7 @@ router.get('/deleteRestaurant', (req, res) => {
 			if (restaurantId) {
 				//delete from person_skill where person_id = :person_id;
 				dbModel.deletePersonSkill(personId, (err, result) => {
-					
+
 					// if (err) {
 					// 	res.render('error', {message: 'Error writing to MySQL'});
 					// 	console.log("Error writing to mysql");
